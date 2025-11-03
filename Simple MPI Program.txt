@@ -1,0 +1,23 @@
+#include <mpi.h>
+#include <stdio.h>
+
+int main(int argc, char** argv) {
+    MPI_Init(&argc, &argv);   // Start MPI
+
+    int size, rank;
+    MPI_Comm_size(MPI_COMM_WORLD, &size); // Total processes
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank); // Process ID
+
+    printf("Hello from process %d out of %d\n", rank, size);
+
+    MPI_Finalize(); // End MPI
+    return 0;
+}
+
+
+mpiexec -n 4 hello.exe
+
+Hello from process 0 out of 4
+Hello from process 1 out of 4
+Hello from process 2 out of 4
+Hello from process 3 out of 4

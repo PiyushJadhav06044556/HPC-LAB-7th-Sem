@@ -1,0 +1,7 @@
+cd "C:\Users\Piyush\Desktop\HPC LAB\HPCL Assignment 6\Problem 2"
+
+compile the code:-
+cl rank_comm.c /I "C:\Program Files (x86)\Microsoft SDKs\MPI\Include" /link /LIBPATH:"C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64" msmpi.lib
+
+run the code :-
+mpiexec -n 5 rank_comm.exe
