@@ -1,3 +1,5 @@
+git clone https://github.com/PiyushJadhav06044556/HPC-LAB-7th-Sem.git
+
 Commands for CUDA Programs :-
 
 1. Run this cell to confirm GPU and CUDA are available:
@@ -20,7 +22,7 @@ Commands for CUDA Programs :-
 Alternate way to run CUDA Programs :-
 
 1. Paste your CUDA code in a Colab cell
-    
+
 Use the special %%writefile magic command at the top of your cell.
 This tells Colab to save the pasted code as a .cu file.
 
@@ -31,3 +33,18 @@ This tells Colab to save the pasted code as a .cu file.
 3. Run it
 
 !./device_info
+
+Commands for OpenMP Code:-
+
+Compile :
+gcc -fopenmp file_name.c -o file_name
+
+Run:
+./file_name
+
+Commands for MPI Code :-
+Compile:
+mpicc filename.c -o file_name
+
+Run:
+mpirun -np <number_of_processes> ./file_name
